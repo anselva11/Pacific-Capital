@@ -1,0 +1,170 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum KYCStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  UNVERIFIED
+}
+
+enum InstrumentType {
+  STOCK
+  CRYPTO
+  FOREX
+  COMMODITY
+}
+
+enum OrderSide {
+  BUY
+  SELL
+}
+
+enum OrderType {
+  MARKET
+  LIMIT
+  STOP
+  STOP_LIMIT
+}
+
+enum OrderStatus {
+  PENDING
+  OPEN
+  PARTIALLY_FILLED
+  FILLED
+  CANCELED
+  REJECTED
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAWAL
+}
+
+enum TransactionStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String
+  role          Role      @default(USER)
+  kycStatus     KYCStatus @default(UNVERIFIED)
+  twoFactorSecret String?
+  isTwoFactorEnabled Boolean @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  profile       Profile?
+  wallets       Wallet[]
+  orders        Order[]
+  transactions  Transaction[]
+  followers     CopyConnection[] @relation("Followers")
+  leaders       CopyConnection[] @relation("Leaders")
+}
+
+model Profile {
+  id          String   @id @default(uuid())
+  userId      String   @unique
+  firstName   String
+  lastName    String
+  phoneNumber String?
+  address     String?
+  country     String?
+  dateOfBirth DateTime?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Wallet {
+  id            String   @id @default(uuid())
+  userId        String
+  currency      String   // e.g., USD, BTC, EUR
+  balance       Float    @default(0.0)
+  lockedBalance Float    @default(0.0) // Balance locked in open orders
+  updatedAt     DateTime @updatedAt
+
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, currency])
+}
+
+model Instrument {
+  id          String         @id @default(uuid())
+  symbol      String         @unique // e.g., AAPL, BTC/USDT
+  name        String
+  type        InstrumentType
+  isActive    Boolean        @default(true)
+  baseCurrency String?       // e.g., BTC
+  quoteCurrency String?      // e.g., USDT
+  orders      Order[]
+}
+
+model Order {
+  id             String      @id @default(uuid())
+  userId         String
+  instrumentId   String
+  side           OrderSide
+  type           OrderType
+  status         OrderStatus @default(PENDING)
+  price          Float?      // Null for market orders
+  stopPrice      Float?      // For stop/stop-limit orders
+  quantity       Float
+  filledQuantity Float       @default(0.0)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  user           User        @relation(fields: [userId], references: [id])
+  instrument     Instrument  @relation(fields: [instrumentId], references: [id])
+  executions     Execution[]
+}
+
+model Execution {
+  id        String   @id @default(uuid())
+  orderId   String
+  price     Float
+  quantity  Float
+  fee       Float    @default(0.0)
+  createdAt DateTime @default(now())
+
+  order     Order    @relation(fields: [orderId], references: [id])
+}
+
+model Transaction {
+  id        String            @id @default(uuid())
+  userId    String
+  type      TransactionType
+  status    TransactionStatus @default(PENDING)
+  currency  String
+  amount    Float
+  txHash    String?           // For crypto deposits/withdrawals
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+
+  user      User              @relation(fields: [userId], references: [id])
+}
+
+model CopyConnection {
+  id         String   @id @default(uuid())
+  followerId String
+  leaderId   String
+  amountAllocated Float
+  status     String   @default("ACTIVE")
+  createdAt  DateTime @default(now())
+
+  follower   User     @relation("Followers", fields: [followerId], references: [id])
+  leader     User     @relation("Leaders", fields: [leaderId], references: [id])
+}
