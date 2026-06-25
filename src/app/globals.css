@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0B0E14;
-  --color-foreground: #E2E8F0;
+  --color-background: #030303;
+  --color-foreground: #FAFAFA;
   
-  --color-primary: #3B82F6; /* Blue */
-  --color-primary-hover: #2563EB;
+  --color-primary: #4F46E5; /* Indigo */
+  --color-primary-hover: #6366F1;
+  --color-accent: #00E5FF; /* Electric Cyan */
   
-  --color-success: #10B981; /* Green for up */
-  --color-danger: #EF4444; /* Red for down */
+  --color-success: #10B981; 
+  --color-danger: #F43F5E; /* Rose */
   --color-warning: #F59E0B;
   
-  --color-panel: #1A1E26; /* Darker panel background */
-  --color-panel-border: #2D3748;
+  --color-panel: #0A0A0A;
+  --color-panel-border: #1F1F1F;
 }
 
 @layer base {
@@ -21,24 +22,27 @@
     color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
     @apply antialiased selection:bg-primary/30;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.05), transparent 25%);
   }
 }
 
 @layer components {
   .glass-panel {
-    @apply bg-panel/80 backdrop-blur-md border border-panel-border rounded-xl shadow-xl;
+    @apply bg-panel/60 backdrop-blur-xl border border-panel-border/60 rounded-2xl shadow-2xl;
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-primary-hover text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20;
+    @apply bg-primary hover:bg-primary-hover text-white font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)];
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-panel-border hover:bg-white/5 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200;
+    @apply bg-panel/50 backdrop-blur-md border border-panel-border hover:bg-white/10 text-white font-medium py-2 px-6 rounded-full transition-all duration-300;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400;
   }
 }
 
