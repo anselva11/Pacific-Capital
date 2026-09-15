@@ -10,7 +10,7 @@ export default function AdminDashboard() {
       {/* Admin Sidebar */}
       <aside className="w-64 border-r border-panel-border bg-panel flex flex-col hidden md:flex">
         <div className="h-16 flex items-center px-4 border-b border-panel-border gap-3">
-          <Image src="/logo.png" alt="Blackridge Capital" width={36} height={36} className="rounded" />
+          <Image src="/logo.jpeg" alt="Blackridge Capital" width={36} height={36} className="rounded" />
           <span className="font-bold text-lg text-primary">Admin</span>
         </div>
         <nav className="flex-1 py-4 flex flex-col gap-2">

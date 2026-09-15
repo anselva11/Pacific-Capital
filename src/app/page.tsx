@@ -12,7 +12,7 @@ export default function Home() {
       {/* Header / Navbar */}
       <header className="w-full py-3 px-4 md:py-4 md:px-12 flex items-center justify-between border-b border-panel-border/30 sticky top-0 bg-background/60 backdrop-blur-xl z-50">
         <Link href="/" className="flex items-center gap-2 md:gap-3 text-xl md:text-2xl font-bold tracking-tighter flex-shrink-0">
-          <Image src="/logo.png" alt="Blackridge Capital" width={36} height={36} className="rounded w-8 h-8 md:w-10 md:h-10 shadow-[0_0_15px_rgba(79,70,229,0.5)]" />
+          <Image src="/logo.jpeg" alt="Blackridge Capital" width={36} height={36} className="rounded w-8 h-8 md:w-10 md:h-10 shadow-[0_0_15px_rgba(79,70,229,0.5)]" />
           <span className="hidden sm:block tracking-tight">Pacific<span className="text-primary font-black">Capital</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
@@ -235,7 +235,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 text-white font-bold tracking-tight mb-6">
-              <Image src="/logo.png" alt="Blackridge Capital" width={24} height={24} className="rounded" />
+              <Image src="/logo.jpeg" alt="Blackridge Capital" width={24} height={24} className="rounded" />
               PacificCapital
             </div>
             <p className="mb-4">The next generation of investing infrastructure.</p>

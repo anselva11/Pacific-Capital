@@ -25,7 +25,7 @@ export default function SettingsPage() {
               </h2>
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-20 h-20 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Image src="/logo.png" alt="Blackridge Capital" width={64} height={64} className="rounded-lg" />
+                  <Image src="/logo.jpeg" alt="Blackridge Capital" width={64} height={64} className="rounded-lg" />
                 </div>
                 <div>
                   <div className="font-bold text-lg">John Doe</div>
