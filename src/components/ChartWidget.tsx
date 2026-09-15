@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { createChart, ColorType, CandlestickSeries } from "lightweight-charts";
+import { createChart, ColorType, CandlestickSeries, UTCTimestamp } from "lightweight-charts";
 
 export default function ChartWidget() {
   const chartContainerRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ export default function ChartWidget() {
       const high = Math.max(open, lastClose) + r * 100;
       const low = Math.min(open, lastClose) - (1 - r) * 100;
       const close = open + (r - 0.5) * 200;
-      data.push({ time: BASE_TIME + i * 3600, open, high, low, close });
+      data.push({ time: (BASE_TIME + i * 3600) as UTCTimestamp, open, high, low, close });
       lastClose = close;
     }
 
