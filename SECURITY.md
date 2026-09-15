@@ -1,6 +1,6 @@
 # Enterprise Security Implementation
 
-For an application managing millions of users and financial assets, security is paramount. The following outlines the security standards implemented at Pasific Capital.
+For an application managing millions of users and financial assets, security is paramount. The following outlines the security standards implemented at Blackridge Capital.
 
 ## 1. Authentication & Authorization
 - **JWT & HTTP-Only Cookies**: JWT access tokens are short-lived (e.g., 15 mins). Refresh tokens are stored in secure, HTTP-only, `SameSite=Strict` cookies to prevent XSS attacks.

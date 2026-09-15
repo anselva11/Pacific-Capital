@@ -12,7 +12,7 @@ export default function Home() {
       {/* Header / Navbar */}
       <header className="w-full py-3 px-4 md:py-4 md:px-12 flex items-center justify-between border-b border-panel-border/30 sticky top-0 bg-background/60 backdrop-blur-xl z-50">
         <Link href="/" className="flex items-center gap-2 md:gap-3 text-xl md:text-2xl font-bold tracking-tighter flex-shrink-0">
-          <Image src="/logo.png" alt="Pacific Capital" width={36} height={36} className="rounded w-8 h-8 md:w-10 md:h-10 shadow-[0_0_15px_rgba(79,70,229,0.5)]" />
+          <Image src="/logo.png" alt="Blackridge Capital" width={36} height={36} className="rounded w-8 h-8 md:w-10 md:h-10 shadow-[0_0_15px_rgba(79,70,229,0.5)]" />
           <span className="hidden sm:block tracking-tight">Pacific<span className="text-primary font-black">Capital</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
@@ -42,7 +42,7 @@ export default function Home() {
             <span className="text-gradient">Future of Wealth</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
-            Pacific Capital is the premier platform for the modern investor. Trade stocks, crypto, and forex with zero commissions and institutional-grade tools.
+            Blackridge Capital is the premier platform for the modern investor. Trade stocks, crypto, and forex with zero commissions and institutional-grade tools.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             <Link href="/register" className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center text-lg px-8 py-3">
@@ -222,7 +222,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
           <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Ready to revolutionize <br className="hidden md:block"/> your portfolio?</h2>
-          <p className="text-xl text-gray-400 mb-10">Join over 2 million investors who trust Pacific Capital.</p>
+          <p className="text-xl text-gray-400 mb-10">Join over 2 million investors who trust Blackridge Capital.</p>
           <Link href="/register" className="btn-primary text-lg px-10 py-4 shadow-[0_0_40px_rgba(79,70,229,0.4)]">
             Open Free Account
           </Link>
@@ -235,7 +235,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 text-white font-bold tracking-tight mb-6">
-              <Image src="/logo.png" alt="Pacific Capital" width={24} height={24} className="rounded" />
+              <Image src="/logo.png" alt="Blackridge Capital" width={24} height={24} className="rounded" />
               PacificCapital
             </div>
             <p className="mb-4">The next generation of investing infrastructure.</p>
@@ -269,7 +269,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto border-t border-panel-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© 2024 Pacific Capital Brokerage Group. All rights reserved.</p>
+          <p>© 2024 Blackridge Capital Brokerage Group. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-white transition-colors">Terms</Link>
             <Link href="#" className="hover:text-white transition-colors">Privacy</Link>

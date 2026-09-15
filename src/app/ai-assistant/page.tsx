@@ -6,7 +6,7 @@ import TopNav from "@/components/TopNav";
 import { MessageSquare, Send, Bot, User, Sparkles } from "lucide-react";
 
 const initialMessages = [
-  { role: "assistant", content: "Hello! I'm Pacific Capital's AI Trading Assistant. I can help you with market analysis, technical indicators, portfolio suggestions, and risk assessment. What would you like to know?" },
+  { role: "assistant", content: "Hello! I'm Blackridge Capital's AI Trading Assistant. I can help you with market analysis, technical indicators, portfolio suggestions, and risk assessment. What would you like to know?" },
 ];
 
 const suggestedQuestions = [
@@ -52,7 +52,7 @@ export default function AIAssistantPage() {
               </div>
               <div>
                 <h1 className="text-xl font-bold">AI Trading Assistant</h1>
-                <p className="text-xs text-gray-400">Powered by Pacific Capital AI</p>
+                <p className="text-xs text-gray-400">Powered by Blackridge Capital AI</p>
               </div>
             </div>
 

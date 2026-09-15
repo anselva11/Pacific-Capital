@@ -13,7 +13,7 @@ export default function RegisterPage() {
             P
           </div>
           <h1 className="text-2xl font-bold">Open an Account</h1>
-          <p className="text-gray-400 text-sm mt-2 text-center">Join Pacific Capital and start trading with enterprise-grade tools.</p>
+          <p className="text-gray-400 text-sm mt-2 text-center">Join Blackridge Capital and start trading with enterprise-grade tools.</p>
         </div>
 
         <form className="space-y-4">

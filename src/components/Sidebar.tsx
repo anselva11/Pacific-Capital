@@ -28,7 +28,7 @@ export default function Sidebar() {
     <aside className="w-16 md:w-64 flex flex-col border-r border-panel-border bg-panel z-10 flex-shrink-0">
       {/* Logo */}
       <Link href="/" className="h-16 flex items-center justify-center md:justify-start md:px-4 border-b border-panel-border gap-3 hover:bg-white/5 transition-colors">
-        <Image src="/logo.png" alt="Pacific Capital" width={36} height={36} className="rounded" />
+        <Image src="/logo.png" alt="Blackridge Capital" width={36} height={36} className="rounded" />
         <span className="ml-1 font-bold text-lg hidden md:block tracking-tight">
           Pacific<span className="text-primary">Capital</span>
         </span>

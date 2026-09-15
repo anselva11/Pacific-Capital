@@ -1,4 +1,4 @@
-# Pacific Capital
+# Blackridge Capital
 
 A professional trading platform and brokerage dashboard built with Next.js, React, TailwindCSS, and PostgreSQL.
 

@@ -13,7 +13,7 @@ export default function LoginPage() {
             P
           </div>
           <h1 className="text-2xl font-bold">Welcome Back</h1>
-          <p className="text-gray-400 text-sm mt-2">Log in to your Pacific Capital account</p>
+          <p className="text-gray-400 text-sm mt-2">Log in to your Blackridge Capital account</p>
         </div>
 
         <form className="space-y-4">

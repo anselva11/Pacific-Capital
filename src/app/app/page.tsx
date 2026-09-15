@@ -21,7 +21,7 @@ export default function AppDownloadPage() {
             <span className="text-gradient">Never Miss a Move.</span>
           </h1>
           <p className="text-xl text-gray-400 mb-10">
-            Download the Pacific Capital mobile app for iOS and Android. Experience desktop-grade performance in the palm of your hand.
+            Download the Blackridge Capital mobile app for iOS and Android. Experience desktop-grade performance in the palm of your hand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="flex items-center gap-3 bg-white text-black px-6 py-4 rounded-xl hover:bg-gray-100 transition-colors font-semibold">

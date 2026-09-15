@@ -1,6 +1,6 @@
 # WebSocket Architecture
 
-Pasific Capital requires ultra-low latency real-time data streaming. We utilize `Socket.io` (for ease of implementation in Next.js/Node) or direct `ws` for high-frequency institutional connections.
+Blackridge Capital requires ultra-low latency real-time data streaming. We utilize `Socket.io` (for ease of implementation in Next.js/Node) or direct `ws` for high-frequency institutional connections.
 
 ## Connection
 `wss://ws.pasific-capital.com/v1`

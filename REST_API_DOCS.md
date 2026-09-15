@@ -1,4 +1,4 @@
-# Pasific Capital REST API Documentation
+# Blackridge Capital REST API Documentation
 
 ## Base URL
 `https://api.pasific-capital.com/v1`

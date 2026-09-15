@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pacific Capital | Professional Trading Platform",
+  title: "Blackridge Capital | Professional Trading Platform",
   description: "Trade stocks, crypto, forex, and commodities with enterprise-grade security and advanced charting.",
 };
 

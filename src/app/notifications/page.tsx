@@ -26,7 +26,7 @@ const initialNotifications: Notification[] = [
   { id: "3", type: "deposit", title: "Deposit Confirmed", message: "Your deposit of 5,000.00 USDT (TRC20) has been credited to your account.", time: "25 min ago", read: false },
   { id: "4", type: "security", title: "New Device Login", message: "A new login was detected from Chrome on macOS in Jakarta, Indonesia.", time: "1h ago", read: false },
   { id: "5", type: "trade", title: "Stop-Loss Triggered — AAPL", message: "Your stop-loss order for 50 AAPL shares at $188.00 has been executed.", time: "2h ago", read: true },
-  { id: "6", type: "system", title: "Scheduled Maintenance", message: "Pacific Capital will undergo scheduled maintenance on Jun 28 from 02:00–04:00 UTC.", time: "3h ago", read: true },
+  { id: "6", type: "system", title: "Scheduled Maintenance", message: "Blackridge Capital will undergo scheduled maintenance on Jun 28 from 02:00–04:00 UTC.", time: "3h ago", read: true },
   { id: "7", type: "alert", title: "Volume Spike — SOL/USDT", message: "SOL/USDT trading volume has spiked +340% in the last hour.", time: "4h ago", read: true },
   { id: "8", type: "trade", title: "Order Filled — ETH/USDT", message: "Your market buy order for 2.0 ETH at $3,420.50 has been filled.", time: "5h ago", read: true },
   { id: "9", type: "deposit", title: "Wire Transfer Received", message: "Your USD wire transfer of $10,000.00 has been credited to your account.", time: "1 day ago", read: true },
